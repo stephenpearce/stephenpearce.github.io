@@ -1,0 +1,39 @@
+---
+layout: game
+
+title: Re:Dream
+release_year: 2023
+abstract: Throwback 3D platforming.
+made_for: Made for Mastered bootcamp.
+thumb: /assets/img/re-dream-thumb.png
+thumb_alt: Re:Dream gameplay thumbnail.
+credit:
+  name: Stephen Pearce
+# team:
+#   - name: Stephen Pearce
+#     url:  https://spdp.dev
+platforms:
+  - name: Itch.io
+    url: https://spdp.itch.io/car-configurator
+created: 2023-01-01 18:51:59 +0100
+#updated: 
+tags: ["Study"]
+is_game: true
+---
+
+| Made with | Unity |
+| Timeline | 16 weeks |
+| Playable | <a href="https://spdp.itch.io/re-dream" rel="nofollow noopener noreferrer" target="_blank" title="Play it on Itch.io">Itch.io</a> |
+
+## About The Game
+
+A throwback 3D platforming project with elements inspired by the classics.
+
+Made in 16 weeks as a major project on Mastered's real-time 3D skills bootcamp.
+
+### Features:
+
+- 3D platforming inspired by '90s character action platformers.
+- An in-game journal system, revealing pages as puzzle pieces are collected.
+- A variety of levels evoking 3D platforming tropes
+- Challenge areas which progressively increase in difficulty.

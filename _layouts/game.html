@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign game = page -%}
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/VideoGame">
+	<header class="post-header">
+		<h1 class="post-title p-name" itemprop="name">{{ game.title | escape }}</h1>
+		<p class="post-meta">
+			<span itemprop="copyrightYear">{{ game.release_year }}</span>
+			• 
+			{%- if game.credit -%}
+				&nbsp;by 
+				<span class="p-author h-card" itemscope itemtype="http://schema.org/Person">
+					<span class="p-name" itemprop="name">{{ game.credit.name }}</span>
+					<link href="{{ game.credit.url }}" class="u-url" itemprop="sameAs" hidden>
+				</span>
+			{%- elsif game.team -%}
+				&nbsp;with&nbsp;
+				{%- for dev in game.team -%}
+					<span class="p-author h-card" itemprop="contributor" itemscope itemtype="http://schema.org/Person">
+						{%- if dev.name == "Stephen Pearce" -%}
+							<span class="p-name" itemprop="name" hidden>{{ dev.name }}</span>
+							<link href="{{ dev.url }}" class="u-url" itemprop="sameAs" rel="me" hidden>
+						{%- else -%}
+							<a href="{{ dev.url }}" rel="noopener" target="_blank"><span class="p-name" itemprop="name">{{ dev.name }}</span></a>
+							<link href="{{ dev.url }}" class="u-url" itemprop="sameAs" hidden>
+							{%- if forloop.last == false -%}
+								&nbsp;&amp;&nbsp;
+							{%- endif -%}
+						{%- endif -%}
+					</span>
+				{%- endfor -%}
+			{%- endif -%}
+		</p>
+	</header>
+	<div class="post-content e-content">
+		<div class="inner">
+		{% if game.video_src and game.video_placeholder %}
+		<video class="video" preload="none" poster="{{ site.url }}{{ game.video_placeholder }}" muted autoplay loop playsinline>
+        	<source src="{{ site.url }}{{ game.video_src }}" type="video/mp4">
+        	Your web browser does not appear to support mp4 video.
+    	</video>
+		{% endif %}
+		{{ content }}
+		</div>
+	</div>
+	<a href="{{ site.url }}">&larr; Back home</a>
+	<!-- permalink -->
+	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

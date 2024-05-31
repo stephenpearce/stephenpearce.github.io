@@ -1,0 +1,370 @@
+/**
+ * Minima tweaks for spdp.dev
+ * Copyright (C) 2024 Stephen Pearce
+ */
+::selection {
+	background-color: #5c636d;
+	color: #fff;
+}
+::-moz-selection {
+	background-color: #5c636d;
+	color: #fff;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+.sr-only {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+body {
+	color: #5c636d;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: normal;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight, .post-header, .footer-col {
+	margin-bottom: 24px;
+}
+pre,
+code {
+	background-color: #f4f4f4;
+	border-color: transparent;
+	border-radius: 0;
+}
+pre {
+	tab-size: 4;
+}
+table {
+	border-color: #f4f4f4;
+	margin-bottom: 32px;
+}
+table th, table td {
+	padding: 8px 16px;
+}
+table tr:nth-child(even) {
+	background-color: #f4f4f4;
+}
+ul,
+ol {
+	margin-left: 32px;
+}
+a,
+a:visited {
+	color: #5c636d;
+	text-decoration: underline;
+}
+.site-header {
+	border-top: none;
+	min-height: auto;
+}
+.site-header h1 {
+	display: inline;
+}
+.site-nav {
+	line-height: normal;
+	top: 13px;
+}
+.site-nav .page-link {
+	color: #5c636d;
+	text-decoration: none;
+}
+.site-title {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: normal;
+	line-height: 1;
+	padding: 24px 0;
+	text-decoration: none;
+}
+.site-title,
+.site-title:visited {
+	color: #5c636d;
+}
+.page-content {
+	padding: 48px 0;
+}
+.post-list-wrap ~ .post-list-wrap {
+	margin-top: 48px;
+}
+.post-title {
+	font-size: 24px;
+	margin-bottom: 8px;
+}
+.post-link,
+.post-list .game .title,
+.post-list .game .year {
+	font-size: 16px;
+}
+.post-title,
+.post-list-heading {
+	font-size: 24px;
+	letter-spacing: normal;
+}
+.post-list-heading {
+	display: inline-block;
+}
+.post-list-heading,
+.post-title,
+.post-list h2,
+.post-list h3 {
+	line-height: normal;
+}
+.post-list h3 a {
+	display: inline-block;
+}
+.post-list > li {
+	margin-bottom: 32px;
+}
+.post-list .game {
+	min-height: 75px;
+	margin-bottom: 16px;
+	padding-left: calc(75px + 16px);
+	position: relative;
+}
+.post-list .thumb {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.post-list .game .thumb,
+.post-list .game .title,
+.post-list .game .abstract,
+.post-list .game .comment {
+	display: block;
+	margin: 0;
+}
+.post-list .game .title {
+	display: inline-block;
+}
+.post-list .game .title,
+.post-list .game .year,
+.post-list .game .abstract,
+.post-list .game .comment {
+	line-height: 24px;
+}
+.post-list .game .comment:before {
+	content: "// ";
+}
+.post-content {
+	margin-bottom: 32px;
+}
+.post-content h2 {
+	font-size: 22px;
+}
+.post-content h3 {
+	font-size: 20px;
+}
+.post-content h4 {
+	font-size: 18px;
+}
+.video {
+	display: block;
+	margin: 0 0 24px;
+	max-width: 640px;
+	width: 100%;
+}
+.wrapper {
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.site-footer {
+	font-size: 14px;
+}
+.site-footer ul {
+	list-style: none;
+	margin: 14px 0 0 0;
+}
+.site-footer ul li {
+	margin: 0;
+}
+.copyright {
+	font-size: 16px;
+}
+
+@media only screen and (min-width: 320px) {
+
+	.site-title {
+		font-size: 18px;
+		padding: 23px 0;
+	}
+}
+
+@media only screen and (min-width: 375px) {
+
+	.site-title {
+		font-size: 22px;
+		padding: 21px 0;
+	}
+	.game table td:first-of-type {
+		width: 33.33%;
+	}
+}
+
+@media only screen and (min-width: 601px) {
+
+	a:hover {
+		text-decoration: none;
+	}
+	.site-title:hover {
+		text-decoration: underline;
+	}
+	.site-nav .page-link {
+		display: inline-block;
+		line-height: 1;
+		padding: 24px 16px;
+		margin: 0;
+		text-decoration: underline;
+	}
+	.site-nav .page-link:hover {
+		text-decoration: none;
+	}
+	.site-nav .page-link:not(:last-child) {
+		margin: 0;
+	}
+	.trigger {
+		margin-right: -16px;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: calc(640px);
+	}
+}
+
+@media only screen and (min-height: 720px) and (min-width: 1180px) {
+
+	.clearfix:after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.wrapper {
+		max-width: calc(1024px - (32px * 2));
+		padding: 0;
+	}
+	.game .page-content .wrapper {
+		margin: 0 auto;
+		max-width: 640px;
+		width: 640px;
+	}
+	.page .page-content .wrapper,
+	.archive .page-content .wrapper,
+	.post .page-content .wrapper {
+		margin: 0 auto;
+		max-width: none;
+		width: 72ch;
+	}
+	.site-header > .wrapper {
+		padding: 64px 0;
+	}
+	.site-header .page-link {
+		padding: 24px;
+	}
+	.site-title {
+		font-size: 26px;
+		padding: 19px 0;
+	}
+	.trigger {
+		margin-right: -24px;
+	}
+	.page-content {
+		padding: 64px 0;
+	}
+	.post-list-wrap ~ .post-list-wrap {
+		margin-top: 64px;
+	}
+	.post-list .game {
+		float: left;
+		padding-right: 16px;
+		width: 50%;
+	}
+	.site-footer {
+		font-size: 16px;
+		padding: 64px 0;
+		text-align: center;
+	}
+
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+
+	::selection {
+		background-color: #beb9b0;
+		color: #191b1c;
+	}
+	::-moz-selection {
+		background-color: #beb9b0;
+		color: #191b1c;
+	}
+	body {
+		background-color: #191b1c;
+		color: #beb9b0;
+	}
+	pre,
+	code {
+		background-color: #1d1f20;
+		border-color: #363b3d;
+	}
+	table {
+		border-color: #beb9b0;
+		color: #beb9b0;
+	}
+	table th, table td {
+		border-color: #363b3d;
+	}
+	table tr:nth-child(even) {
+		background-color: #1d1f20;
+	}
+	a,
+	a:hover,
+	a:visited {
+		color: #beb9b0;
+	}
+	.site-header {
+		border-bottom-color: #363b3d;
+	}
+	.site-title,
+	.site-title:visited {
+		color: #beb9b0;
+	}
+	.site-nav .page-link {
+		color: #dddad6;
+	}
+	.site-nav {
+		background-color: #191b1c;
+		border-color: #424242;
+	}
+	.site-nav .menu-icon > svg {
+		fill: #beb9b0;
+	}
+	.site-nav .page-link {
+		color: #beb9b0;
+	}
+	.post-meta {
+		color: #999083;
+	}
+	.highlight {
+		background-image: initial;
+		background-color: #181a1b;
+	}
+	.site-footer {
+		border-top-color: #363b3d;
+	}
+	.footer-col-wrapper {
+		color: #999083;
+	}
+	.svg-icon {
+		color: #999083;
+	}
+}

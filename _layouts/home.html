@@ -1,0 +1,48 @@
+---
+layout: default
+---
+{% include date_format.html %}
+
+<div class="home">
+	{%- if page.title -%}
+		<h1 class="page-heading">{{ page.title }}</h1>
+	{%- endif -%}
+	{%- if page.has_cta -%}
+		<div class="post-list-wrap">
+			{{ content }}
+		</div>
+	{%- endif -%}
+
+	<!-- Output: Games -->
+	{%- assign sorted_games = site.games | sort: 'created' | reverse -%}
+	{% assign tag_order = "Game Jam,Study" | split: "," %}
+
+	{%- for tag in tag_order -%}
+	<div class="post-list-wrap">
+		<h2 class="post-list-heading">
+			{% if tag == "Released Games" %}
+				Released Games
+			{% elsif tag == "Game Jam" %}
+				Game Jams
+			{% elsif tag == "Study" %}
+				Studies
+			{% endif %}
+		</h2>
+		<ul class="post-list">
+			{% for game in sorted_games %}
+				{% if game.tags contains tag %}
+				<li class="game">
+					<h3 class="title">
+						<a href="{{ game.url }}">{{ game.title }}</a>
+					</h3>
+					<a href="{{ game.url }}"><img class="thumb" src="{{ site.url}}{{ game.thumb }}" alt="{{ game.thumb_alt }}"></a>
+					<span class="abstract">{{ game.abstract }}</span>
+					<span class="comment">{{ game.made_for }}</span>
+				</li>
+				{%- endif -%}
+			{% endfor %}
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+	{%- endfor -%}
+</div>
