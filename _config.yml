@@ -39,10 +39,11 @@ minima:
 collections:
   games:
     output: true
+    permalink: /games/:title.html
 
 # Jekyll Feed Config
 feed:
-  posts_limit: 10
+  posts_limit: 15
   collections:
     posts:
       path: "/feed.xml"
