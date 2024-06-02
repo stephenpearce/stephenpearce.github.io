@@ -1,0 +1,97 @@
+/**
+ * Styles for stephenpearce.dev
+ * Copyright (C) 2024 Stephen Pearce
+ */
+::selection {
+	background-color: #4A4A4A;
+	color: #f8f8f8;
+}
+::-moz-selection {
+	background-color: #4A4A4A;
+	color: #f8f8f8;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+.sr-only {
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+}
+body {
+	background-color: #f8f8f8;
+	color: #4A4A4A;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	height: 100vh;
+  	margin: 0;
+	line-height: normal;
+	padding: 32px;
+}
+a,
+a:visited {
+	color: #4A4A4A;
+}
+.wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+.header {
+	text-align: center;
+}
+.header h1 {
+	line-height: 1;
+	margin-bottom: 0;
+}
+.header .tagline {
+	display: block;
+	font-size: 18px;
+	margin-top: 4px;
+}
+.headshot {
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+.projects:first-of-type {
+	margin-top: 48px;
+}
+.projects ~ .projects {
+	margin-top: 48px;
+}
+.projects ul {
+	list-style: none;
+	margin: 24px 0 0 0;
+	padding-left: 0;
+}
+.projects ul li ~ li {
+	margin-top: 16px;
+}
+.project {
+
+}
+.blurb {
+	display: block;
+}
+.footer {
+	margin-top: 48px;
+}
+
+@media only screen and (min-height: 640px) and (min-width: 640px) {
+
+	body {
+		padding-top: 0;
+	}
+	.content {
+		margin: auto;
+		max-width: 72ch;
+	}
+	.footer {
+		text-align: center;
+	}
+}
