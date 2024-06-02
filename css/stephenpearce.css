@@ -2,13 +2,19 @@
  * Styles for stephenpearce.dev
  * Copyright (C) 2024 Stephen Pearce
  */
+:root {
+	--spbg: #f8f8f8;
+	--spfg: #4a4a4a;
+	--spbg-alt: #1c1e1f;
+	--spfg-alt: #b9b3aa;
+}
 ::selection {
-	background-color: #4A4A4A;
-	color: #f8f8f8;
+	background-color: var(--spfg);
+	color: var(--spbg);
 }
 ::-moz-selection {
-	background-color: #4A4A4A;
-	color: #f8f8f8;
+	background-color: var(--spfg);
+	color: var(--spbg);
 }
 *,
 *:before,
@@ -22,19 +28,22 @@
 	width: 0;
 }
 body {
-	background-color: #f8f8f8;
-	color: #4A4A4A;
+	background-color: var(--spbg);
+	color: var(--spfg);
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	height: 100vh;
-  	margin: 0;
+	margin: 0;
 	line-height: normal;
 	padding: 32px;
 }
 a,
 a:visited {
-	color: #4A4A4A;
+	color: var(--spfg);
+}
+a:hover {
+	text-decoration: none;
 }
 .wrapper {
 	height: 100%;
@@ -54,7 +63,7 @@ a:visited {
 	margin-top: 4px;
 }
 .headshot {
-	border-radius: 50%;
+	border-radius: 25%;
 	display: block;
 	margin: 0 auto;
 }
@@ -72,14 +81,31 @@ a:visited {
 .projects ul li ~ li {
 	margin-top: 16px;
 }
-.project {
-
-}
 .blurb {
 	display: block;
 }
 .footer {
 	margin-top: 48px;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+
+	::selection {
+		background-color: var(--spfg-alt);
+		color: var(--spbg-alt);
+	}
+	::-moz-selection {
+		background-color: var(--spfg-alt);
+		color: var(--spbg-alt);
+	}
+	body {
+		background-color: var(--spbg-alt);
+		color: var(--spfg-alt);
+	}
+	a,
+	a:visited {
+		color: var(--spfg-alt);
+	}
 }
 
 @media only screen and (min-height: 640px) and (min-width: 640px) {
