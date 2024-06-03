@@ -10,10 +10,16 @@
 	<body class="home">
 		<div class="wrapper">
 			<div class="content">
-				<img class="headshot" src="img/me.jpg" height="130" width="130" alt="An old photo of Stephen Pearce">
 				<header class="header">
-					<h1>Stephen Pearce</h1>
-					<span class="tagline">Web Development</span>
+					<picture>
+						<source srcset="img/me.jpg" height="130" width="130" media="(min-width: 640px) and (min-height: 640px)">
+						<img class="header__headshot" src="img/me-48.jpg" height="48" width="48" alt="An old photo of Stephen Pearce">
+					</picture>
+					<div class="header__inner">
+						<h1>Stephen Pearce</h1>
+						<span class="tagline">Web Developer</span>
+					</div>
+					<div class="clear"></div>
 				</header>
 				<!-- <div class="projects">
 					<header>
@@ -41,9 +47,7 @@
 					<p>Copyright &copy; 2024 Stephen Pearce</p>
 					<p>
 						<a href="asset/cv/stephen-pearce-web-cv.pdf">Curriculum Vitae</a>
-						<br>
 						<a href="https://github.com/stephenpearce" rel="me nofollow noopener noreferrer" target="_blank">GitHub</a>
-						<br><br>
 						<a href="https://github.com/stephenpearce/stephenpearce.github.io/commits.atom" title="Get updates when this page changes">Changes (RSS)</a>
 					</p>
 				</div>

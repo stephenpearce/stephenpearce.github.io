@@ -21,11 +21,10 @@
 *:after {
 	box-sizing: border-box;
 }
-.sr-only {
-	height: 0;
-	overflow: hidden;
-	position: absolute;
-	width: 0;
+.clear:after {
+	content: "";
+    display: table;
+    clear: both;
 }
 body {
 	background-color: var(--spbg);
@@ -36,7 +35,13 @@ body {
 	height: 100vh;
 	margin: 0;
 	line-height: normal;
-	padding: 32px;
+	padding: 16px;
+}
+h2 {
+	font-size: 22px;
+}
+ul li {
+	font-size: 16px;
 }
 a,
 a:visited {
@@ -53,16 +58,26 @@ a:hover {
 .header {
 	text-align: center;
 }
+.header__headshot {
+	float: left;
+}
+.header__inner {
+	padding-left: calc(48px + 16px);
+    text-align: left;
+}
 .header h1 {
+	font-size: 24px;
 	line-height: 1;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 .header .tagline {
 	display: block;
 	font-size: 18px;
-	margin-top: 4px;
+	line-height: 1;
+	margin-top: 6px;
 }
-.headshot {
+.header__headshot {
 	border-radius: 25%;
 	display: block;
 	margin: 0 auto;
@@ -73,19 +88,33 @@ a:hover {
 .projects ~ .projects {
 	margin-top: 48px;
 }
+.projects h2 {
+	margin: 0 0 0 0;
+}
 .projects ul {
 	list-style: none;
-	margin: 24px 0 0 0;
+	margin: 0;
 	padding-left: 0;
+}
+.projects ul li {
+
 }
 .projects ul li ~ li {
 	margin-top: 16px;
+}
+.projects ul li a {
+	display: block;
+	padding: 16px 0 8px;
 }
 .blurb {
 	display: block;
 }
 .footer {
 	margin-top: 48px;
+}
+.footer a {
+	display: block;
+	padding: 6px 0;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -113,11 +142,48 @@ a:hover {
 	body {
 		padding-top: 0;
 	}
+	ul li,
+	p {
+		line-height: 1.4;
+	}
 	.content {
 		margin: auto;
 		max-width: 72ch;
 	}
+	.header__headshot {
+		float: none;
+	}
+	.header h1 {
+		font-size: 32px;
+		margin-top: 24px;
+	}
+	.header .tagline {
+		font-size: 18px;
+		margin-top: 8px;
+	}
+	.header__inner {
+		padding-left: 0;
+		text-align: center;
+	}
+	.projects h2 {
+		font-size: 24px;
+	}
+	.projects ul {
+		margin-top: 24px;
+	}
+	.projects ul li ~ li {
+		margin-top: 24px;
+	}
+	.projects ul li  a {
+		padding: 0;
+	}
 	.footer {
 		text-align: center;
+	}
+	.footer a {
+		padding: 0;
+	}
+	.footer a:last-of-type {
+		margin-top: 16px;
 	}
 }
