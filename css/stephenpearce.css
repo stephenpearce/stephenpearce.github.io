@@ -3,10 +3,10 @@
  * Copyright (C) 2024 Stephen Pearce
  */
 :root {
-	--spbg: #f8f8f8;
-	--spfg: #4a4a4a;
-	--spbg-alt: #1c1e1f;
-	--spfg-alt: #b9b3aa;
+	--spbg: #fdfdfd;
+	--spfg: #5c636d;
+	--spbg-alt: #191b1c;
+	--spfg-alt: #beb9b0;
 }
 ::selection {
 	background-color: var(--spfg);
