@@ -62,11 +62,11 @@ a:hover {
 	float: left;
 }
 .header__inner {
-	padding-left: calc(48px + 16px);
+	padding: 6px 0 0 calc(72px + 16px);
     text-align: left;
 }
 .header h1 {
-	font-size: 24px;
+	font-size: 26px;
 	line-height: 1;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -75,7 +75,7 @@ a:hover {
 	display: block;
 	font-size: 18px;
 	line-height: 1;
-	margin-top: 6px;
+	margin-top: 8px;
 }
 .header__headshot {
 	border-radius: 25%;
