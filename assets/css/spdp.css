@@ -184,6 +184,10 @@ a:visited {
 .site-footer ul li {
 	margin: 0;
 }
+.site-footer ul li a {
+	display: block;
+	padding: 8px 0;
+}
 .copyright {
 	font-size: 16px;
 }
@@ -294,7 +298,9 @@ a:visited {
 		padding: 64px 0;
 		text-align: center;
 	}
-
+	.site-footer ul li a {
+		padding: 0;
+	}
 }
 
 @media only screen and (prefers-color-scheme: dark) {
