@@ -70,9 +70,24 @@ a:visited {
 	line-height: normal;
 	top: 13px;
 }
+.site-nav input:checked ~ .trigger {
+	padding-bottom: 0;
+	margin-bottom: 8px;
+}
 .site-nav .page-link {
 	color: #5c636d;
+	padding: 8px 10px 8px 64px;
 	text-decoration: none;
+}
+.site-nav label[for="nav-trigger"] {
+	transition: transform .2s ease;
+}
+.nav-trigger:checked + label[for="nav-trigger"] {
+	transform: rotate(90deg);
+}
+.nav-trigger:checked ~ .trigger {
+	display: block;
+	opacity: 1;
 }
 .site-title {
 	display: inline-block;
