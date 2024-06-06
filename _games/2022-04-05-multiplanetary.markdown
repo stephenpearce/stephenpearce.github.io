@@ -52,7 +52,7 @@ I had a few things to learn in order to make my idea work. These aspects at leas
 * I wasted the better part of two days on project plumbing and menu code. You don&apos;t need either in a game jam.
 * I don&apos;t like to blame the tools...but the tools crashed a lot on me this weekend. Ordinarily this wouldn&apos;t bother me, but when you&apos;re strapped for time then it really adds to the pressure.
 * I should&apos;ve playtested. It became clear after submitting that the game is much too difficult and it&apos;s suffering in the feedback as a result.
-* The game was developed primarily using an Xbox controller...but you can&apos;t assume that the folks playing will be using such hardware too. The keyboard experience doesn&apos;t quite match the controller experience and as such the game is much more difficult than it ought to be.
+* The game was made with a game controller in mind...but you can&apos;t assume that the folks playing will be using such hardware. The keyboard experience doesn&apos;t quite match the controller and as such the game is much more difficult on a keyboard than it ought to be.
 * I completely forgot that difficulty should scale. My game appears to be backward in that sense in that it&apos;s actually most difficult upfront then gets slightly easier as time progresses, assuming RNG in is the player&apos;s favour. Playtesting the game even a couple of hours before submission would&apos;ve caught this.
 
 

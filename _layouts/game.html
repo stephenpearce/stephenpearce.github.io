@@ -39,7 +39,7 @@ layout: default
 		{% if game.video_src and game.video_placeholder %}
 		<video class="video" preload="none" poster="{{ site.url }}{{ game.video_placeholder }}" muted autoplay loop playsinline>
         	<source src="{{ site.url }}{{ game.video_src }}" type="video/mp4">
-        	Your web browser does not appear to support mp4 video.
+        	Your browser does not appear to support mp4 video.
     	</video>
 		{% endif %}
 		{{ content }}
