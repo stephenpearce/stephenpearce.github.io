@@ -115,8 +115,13 @@ a:hover {
 .footer {
 	margin-top: 48px;
 }
-.footer a {
-	display: block;
+.links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.links li a {
+	display: inline-block;
 	padding: 6px 0;
 }
 
@@ -183,8 +188,8 @@ a:hover {
 	.footer {
 		text-align: center;
 	}
-	.footer a {
+	.links li a {
 		display: inline;
-		padding: 0;
+    	padding: 0;
 	}
 }
