@@ -184,6 +184,7 @@ a:hover {
 		text-align: center;
 	}
 	.footer a {
+		display: inline;
 		padding: 0;
 	}
 }
