@@ -106,7 +106,7 @@ a:hover {
 	margin-top: 16px;
 }
 .projects ul li a {
-	display: block;
+	display: inline-block;
 	padding: 16px 0 8px;
 }
 .blurb {
@@ -185,8 +185,5 @@ a:hover {
 	}
 	.footer a {
 		padding: 0;
-	}
-	.footer a:last-of-type {
-		margin-top: 16px;
 	}
 }
