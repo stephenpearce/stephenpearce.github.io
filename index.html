@@ -12,14 +12,14 @@
 	<body class="home">
 		<div class="wrapper">
 			<div class="content">
-				<header class="header">
+				<header class="header" role="banner">
 					<picture>
 						<source srcset="img/me.jpg" height="130" width="130" media="(min-width: 640px) and (min-height: 640px)">
 						<img class="header__headshot" src="img/me-72.jpg" height="72" width="72" alt="An old photo of Stephen Pearce">
 					</picture>
 					<div class="header__inner">
 						<h1>Stephen Pearce</h1>
-						<span class="tagline">Web Developer</span>
+						<span class="tagline" aria-label="Stephen Pearce's primary occupation">Web Developer</span>
 					</div>
 					<div class="clear"></div>
 				</header>
@@ -34,7 +34,7 @@
 						</li>
 					</ul>
 				</div>
-				<footer class="footer h-card">
+				<footer class="footer h-card" role="contentinfo">
 					<p>Copyright &copy; 2024 Stephen Pearce</p>
 					<p>
 						<a href="asset/cv/stephen-pearce-web-cv.pdf">Curriculum Vitae</a>
