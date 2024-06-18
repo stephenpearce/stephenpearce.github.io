@@ -200,7 +200,7 @@ a:visited {
 	margin: 0;
 }
 .site-footer ul li a {
-	display: block;
+	display: inline-block;
 	padding: 8px 0;
 }
 .copyright {
