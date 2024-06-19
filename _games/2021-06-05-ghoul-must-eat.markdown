@@ -7,6 +7,8 @@ abstract: Eat to survive and grow.
 made_for: Made for Weekly Game Jam.
 thumb: /assets/img/ghoul-must-eat-thumb.png
 thumb_alt: Ghoul Must Eat gameplay thumbnail.
+video_src: /assets/video/ghoul-must-eat.mp4
+video_placeholder: /assets/video/ghoul-must-eat-placeholder.png
 credit:
   name: Stephen Pearce
 # team:

@@ -7,6 +7,8 @@ abstract: This virtual pet must clean up after itself!
 made_for: Made for One Hour Game Jam.
 thumb: /assets/img/it-has-a-beard-thumb.png
 thumb_alt: It Has A Beard gameplay thumbnail.
+video_src: /assets/video/it-has-a-beard.mp4
+video_placeholder: /assets/video/it-has-a-beard-placeholder.png
 credit:
   name: Stephen Pearce
 # team:

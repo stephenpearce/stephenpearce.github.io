@@ -7,6 +7,8 @@ abstract: Use your charge to pick up and repel.
 made_for: Made for Weekly Game Jam.
 thumb: /assets/img/charged-thumb.png
 thumb_alt: Charged gameplay thumbnail.
+video_src: /assets/video/charged.mp4
+video_placeholder: /assets/video/charged-placeholder.png
 credit:
   name: Stephen Pearce
 team:

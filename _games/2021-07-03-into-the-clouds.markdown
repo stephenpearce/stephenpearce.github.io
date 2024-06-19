@@ -7,6 +7,8 @@ abstract: Don't fall into the sky!
 made_for: Made for One Hour Game Jam.
 thumb: /assets/img/into-the-clouds-thumb.png
 thumb_alt: Into The Clouds gameplay thumbnail.
+video_src: /assets/video/into-the-clouds.mp4
+video_placeholder: /assets/video/into-the-clouds-placeholder.png
 credit:
   name: Stephen Pearce
 # team:

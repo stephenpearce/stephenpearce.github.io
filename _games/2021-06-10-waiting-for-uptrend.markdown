@@ -7,6 +7,8 @@ abstract: $GMJM is dipping and fast!
 made_for: Made for Weekly Game Jam.
 thumb: /assets/img/waiting-for-uptrend-thumb.png
 thumb_alt: Waiting For Uptrend gameplay thumbnail.
+video_src: /assets/video/waiting-for-uptrend.mp4
+video_placeholder: /assets/video/waiting-for-uptrend-placeholder.png
 credit:
   name: Stephen Pearce
 # team:

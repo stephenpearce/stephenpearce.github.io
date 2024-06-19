@@ -7,8 +7,6 @@ abstract: Billionaires are leaving. Send them back!
 made_for: Made for Ludum Dare.
 thumb: /assets/img/multiplanetary-thumb.png
 thumb_alt: Multiplanetary gameplay thumbnail.
-clip: /assets/video/multiplanetary-clip.mp4
-clip_placeholder: /assets/video/multiplanetary-placeholder.png
 credit:
   name: Stephen Pearce
 # team:
