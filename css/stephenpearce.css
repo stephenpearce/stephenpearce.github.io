@@ -145,7 +145,7 @@ a:hover {
 	}
 }
 
-@media only screen and (min-height: 640px) and (min-width: 640px) {
+@media only screen and (min-height: 900px) and (min-width: 900px) {
 
 	body {
 		padding-top: 0;
