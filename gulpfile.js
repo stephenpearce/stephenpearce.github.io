@@ -1,19 +1,16 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
-const cleanCSS = require('gulp-clean-css');
 const deploy = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
-const rename = require('gulp-rename');
+const inlineSource = require('gulp-inline-source');
 const replace = require('gulp-replace');
-const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 
 const paths = {
-	html: 'src/*.html',
 	css: 'src/css/*.css',
-	js: 'src/js/*.js',
+	html: 'src/*.html',
 	images: 'src/img/*',
 	assets: 'src/assets/*',
 	loose: [
@@ -21,10 +18,6 @@ const paths = {
 		'src/favicon.ico'
 	],
 	dist: 'dist/'
-};
-
-const getCacheTimestamp = () => {
-	return `${Date.now()}`;
 };
 
 // Clean dist
@@ -39,36 +32,14 @@ gulp.task('deploy', () => {
 		.pipe(deploy())
 });
 
-// Minify HTML
+// Minify HTML and inline
 gulp.task('html', () => {
-	const version = getCacheTimestamp();
-    return gulp.src(paths.html)
-		.pipe(replace(/\.css"/g, `.min.css?v=${version}"`))
-		.pipe(replace(/\.js"/g, `.min.js?v=${version}"`))
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest(paths.dist))
-        .pipe(browserSync.stream())
-});
+	const version = Date.now().toString(); // Generate version timestamp
 
-// Minify CSS
-gulp.task('css', () => {
-	return gulp.src(paths.css)
-		.pipe(sourcemaps.init())
-		.pipe(cleanCSS())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.dist + 'css'))
-		.pipe(browserSync.stream())
-});
-
-// Minify JavaScript
-gulp.task('js', () => {
-	return gulp.src(paths.js)
-		.pipe(sourcemaps.init())
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.dist + 'js'))
+	return gulp.src(paths.html)
+		.pipe(inlineSource({ compress: true }))
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(gulp.dest(paths.dist))
 		.pipe(browserSync.stream());
 });
 
@@ -102,13 +73,12 @@ gulp.task('watch', () => {
 		reloadDelay: 100		// small delay to ensure everything is properly updated
 	});
 	gulp.watch(paths.html, gulp.series('html')).on('change', browserSync.reload);
-    gulp.watch(paths.css, gulp.series('css')).on('change', browserSync.reload);
-    gulp.watch(paths.js, gulp.series('js')).on('change', browserSync.reload);
-    gulp.watch(paths.images, gulp.series('images')).on('change', browserSync.reload);
+	gulp.watch(paths.css, gulp.series('html')).on('change', browserSync.reload);
+	gulp.watch(paths.images, gulp.series('images')).on('change', browserSync.reload);
 });
 
 // Default: clean dist folder, build files, start server and watch for changes
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'js', 'images', 'assets', 'loose'), 'watch'));
+gulp.task('default', gulp.series('clean', gulp.parallel('images', 'assets', 'loose'), 'html', 'watch'));
 
 // Build: clean dist folder, build files
-gulp.task('build', gulp.series('clean', gulp.parallel('html', 'css', 'js', 'images', 'loose', 'assets')));
+gulp.task('build', gulp.series('clean', gulp.parallel('images', 'loose', 'assets'), 'html'));
