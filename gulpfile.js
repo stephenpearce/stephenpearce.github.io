@@ -5,8 +5,6 @@ const deploy = require('gulp-gh-pages');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const inlineSource = require('gulp-inline-source');
-const replace = require('gulp-replace');
-const uglify = require('gulp-uglify');
 
 const paths = {
 	css: 'src/css/*.css',
