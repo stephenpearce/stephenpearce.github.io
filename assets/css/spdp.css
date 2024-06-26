@@ -314,7 +314,7 @@ a:visited {
 		text-align: center;
 	}
 	.site-footer ul li a {
-		padding: 0;
+		padding: 2px 0;
 	}
 }
 
