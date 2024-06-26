@@ -10,7 +10,7 @@ const paths = {
 	css: 'src/css/*.css',
 	html: 'src/*.html',
 	images: 'src/img/*',
-	assets: 'src/assets/*',
+	assets: 'src/asset/**/*',
 	loose: [
 		'src/CNAME',
 		'src/favicon.ico'
@@ -58,7 +58,7 @@ gulp.task('loose', () => {
 // Handle downloadable assets
 gulp.task('assets', () => {
 	return gulp.src(paths.assets)
-		.pipe(gulp.dest(paths.dist + 'assets'))
+		.pipe(gulp.dest(paths.dist + 'asset'))
 		.pipe(browserSync.stream())
 });
 
