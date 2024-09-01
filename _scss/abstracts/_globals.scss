@@ -1,0 +1,70 @@
+/**
+ * Global styles for spdp.dev
+ * Copyright (C) 2024 Stephen Pearce
+ */
+body {
+	color: $blue_metal;
+	font-family: $site_font;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: normal;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+	margin-bottom: $push_down;
+}
+pre,
+code {
+	background-color: $white_smoke;
+	border-color: transparent;
+	border-radius: 0;
+}
+pre {
+	tab-size: 4;
+}
+table {
+	border-color: $white_smoke;
+	margin-bottom: 32px;
+}
+table th, table td {
+	padding: 8px 16px;
+}
+table tr:nth-child(even) {
+	background-color: $white_smoke;
+}
+ul,
+ol {
+	margin-left: 32px;
+}
+a,
+a:visited {
+	color: $blue_metal;
+	text-decoration: underline;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+
+    body {
+		background-color: $black_pearl;
+		color: $cotton_seed;
+	}
+	pre,
+	code {
+		background-color: $dark_jungle_green;
+		border-color: $montana;
+	}
+	table {
+		border-color: $cotton_seed;
+		color: $cotton_seed;
+	}
+	table th, table td {
+		border-color: $montana;
+	}
+	table tr:nth-child(even) {
+		background-color: $dark_jungle_green;
+	}
+	a,
+	a:hover,
+	a:visited {
+		color: $cotton_seed;
+	}
+}

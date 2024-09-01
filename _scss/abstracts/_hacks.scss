@@ -1,0 +1,33 @@
+/**
+ * Hacks and tricks for spdp.dev
+ * Copyright (C) 2024 Stephen Pearce
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+	background-color: $blue_metal;
+	color: $white;
+}
+::-moz-selection {
+	background-color: $blue_metal;
+	color: $white;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+
+	::selection {
+		background-color: $cotton_seed;
+		color: $black_pearl;
+	}
+	::-moz-selection {
+		background-color: $cotton_seed;
+		color: $black_pearl;
+	}
+}

@@ -1,0 +1,19 @@
+/**
+ * Useful utilities for spdp.dev
+ * Copyright (C) 2024 Stephen Pearce
+ */
+.sr-only {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+@media only screen and (min-height: 720px) and (min-width: 1180px) {
+
+	.clearfix:after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
