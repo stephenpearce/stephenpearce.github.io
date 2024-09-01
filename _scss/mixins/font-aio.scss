@@ -1,0 +1,17 @@
+/// Provides font styles
+/// 
+/// @param {string} $family the font family
+/// @param {integer (px)} $size the font size
+/// @param {integer (unitless)} $weight the font weight
+/// @param {integer (px)} $lh the line height
+/// @param {bool} $smoothing optional true/false enablement of antialiasing
+@mixin font-aio($family, $size, $weight, $lh, $smoothing: false) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lh;
+    @if $smoothing {
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+}

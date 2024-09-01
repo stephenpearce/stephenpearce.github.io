@@ -4,10 +4,7 @@
  */
 body {
 	color: $blue_metal;
-	font-family: $site_font;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: normal;
+	@include font-aio($site_font, 400, 16px, normal, true);
 }
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
 	margin-bottom: $push_down;
