@@ -4,7 +4,7 @@
 // Mixins
 @import "_scss/mixins/font-aio.scss";
 
-// Variables
+// Abstracts
 @import "_scss/abstracts/colours.scss";
 @import "_scss/abstracts/values.scss";
 @import "_scss/abstracts/fonts.scss";
@@ -13,6 +13,11 @@
 @import "_scss/abstracts/utilities.scss";
 
 // Components
+// @import "_scss/components/header.scss"
+// @import "_scss/components/game-list.scss"
+// @import "_scss/components/video.scss"
+// @import "_scss/components/post.scss"
+// @import "_scss/components/footer.scss"
 
-// To be split...
+// TODO: Split into components and seperate original styles from minima overrides
 @import "_scss/spdp.scss";
