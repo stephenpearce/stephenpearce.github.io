@@ -10,7 +10,7 @@ $breakpoints: (
   $min-width: map-get($breakpoints, $breakpoint);
 
   @if $min-width {
-    @media (min-width: #{$min-width}) {
+    @media screen and (min-width: #{$min-width}) {
       @content;
     }
   } @else {
