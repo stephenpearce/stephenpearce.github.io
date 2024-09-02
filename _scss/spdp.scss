@@ -136,23 +136,7 @@
 	padding-right: 16px;
 	padding-left: 16px;
 }
-.site-footer {
-	font-size: 14px;
-}
-.site-footer ul {
-	list-style: none;
-	margin: 14px 0 0 0;
-}
-.site-footer ul li {
-	margin: 0;
-}
-.site-footer ul li a {
-	display: inline-block;
-	padding: 8px 0;
-}
-.copyright {
-	font-size: 16px;
-}
+
 
 @media only screen and (min-width: 320px) {
 
@@ -250,14 +234,6 @@
 		padding-right: 16px;
 		width: 50%;
 	}
-	.site-footer {
-		font-size: 16px;
-		padding: 64px 0;
-		text-align: center;
-	}
-	.site-footer ul li a {
-		padding: 2px 0;
-	}
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -288,12 +264,6 @@
 	.highlight {
 		background-image: initial;
 		background-color: $blackcurrant;
-	}
-	.site-footer {
-		border-top-color: $montana;
-	}
-	.footer-col-wrapper {
-		color: $felted_wool;
 	}
 	.svg-icon {
 		color: $felted_wool;

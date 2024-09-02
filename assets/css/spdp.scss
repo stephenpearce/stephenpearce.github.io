@@ -3,6 +3,7 @@
 
 // Mixins
 @import "_scss/mixins/font-aio.scss";
+@import "_scss/mixins/break-up.scss";
 
 // Abstracts
 @import "_scss/abstracts/colours.scss";
@@ -17,7 +18,7 @@
 // @import "_scss/components/game-list.scss"
 // @import "_scss/components/video.scss"
 // @import "_scss/components/post.scss"
-// @import "_scss/components/footer.scss"
+@import "_scss/components/footer.scss";
 
 // TODO: Split into components and seperate original styles from minima overrides
 @import "_scss/spdp.scss";
